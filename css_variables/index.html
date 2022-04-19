@@ -15,12 +15,27 @@
             <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
 
             <label for="base">Base Color</label>
-            <input id="base" type="color" name="base" value="#ffc600">
+            <input id="base" type="color" name="base" value="#FFFFFF">
         </div>
 
-        <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+        <img src="https://cdn.pixabay.com/photo/2016/02/16/21/07/books-1204029_960_720.jpg">
 
     <style>
+        :root {
+            --base: #FFFF;
+            --spacing: 10px;
+            --blur: 10px;
+        }
+
+        img {
+            padding: var(--spacing);
+            background: var(--base);
+            filter: blur(var(--blur));
+        }
+
+        .hl {
+            color: var(--base);
+        }
 
         body {
         text-align: center;
