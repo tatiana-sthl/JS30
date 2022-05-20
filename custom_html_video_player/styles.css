@@ -10,9 +10,9 @@ html {
     margin: 0;
     padding: 0;
     display: flex;
-    background: #79523c;
+    background: #355029;
     min-height: 100vh;
-    background: linear-gradient(135deg, #816234 0%,#926a3b 48%,#8a6030 100%);
+    background: linear-gradient(135deg, #6b8b4e 0%,#85ac75 48%,#a6c097 100%);
     background-size: cover;
     align-items: center;
     justify-content: center;
