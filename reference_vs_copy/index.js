@@ -22,4 +22,34 @@ console.log(players, team)
 team[3] = 'Lux';
 
 /* What happens when we update that array ?
+We have edited the original array too.
+Because it's an array reference, not an array copy.
+They both point to the same array.
 */
+
+// If we take a copy
+const team2 = players.slice();
+
+// If we create a new array and concat the old one in
+const team3 = [].concat(players);
+
+// If we use the ES6 Spread
+const team4 = [...players];
+team4[3] = 'hellooooo';
+console.log(team4);
+
+const team5 = Array.from(players);
+
+/* Now, with all this methods, the original one isn't changed */
+
+// It works exactly the same for objects
+const person = {
+    name: "Tati",
+    age: 28
+};
+
+const captain = Object.assign({}, person, { number: 99});
+console.log(captain);
+
+const captain2 = {...person};
+
