@@ -9,8 +9,20 @@ function addItem(e) {
         text,
         done: false
     };
-
+    
+    items.push(item);
+    populateList(items, itemsList); 
     this.reset();
+}
+
+function populateList(plants = [], plantsList) {
+    plantsList.innerHTML = plants.map((plant, i) => {
+        return ` 
+            <li>
+                <label for="">${plant.text}</label>
+            </li>
+        `;
+    }).join('');
 }
 
 addItems.addEventListener('submit', addItem);
