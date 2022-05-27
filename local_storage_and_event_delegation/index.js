@@ -1,3 +1,3 @@
-const addItems = document.querySelector('.add-items');
-const itemsList = document.querySelector('.plates');
+const addItems = document.querySelector('.add-plant');
+const itemsList = document.querySelector('.plants');
 const items = [];
