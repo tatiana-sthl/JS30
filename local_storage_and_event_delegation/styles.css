@@ -59,7 +59,7 @@ html {
   }
   
   .plants input:checked + label:before {
-    content: "🌮";
+    content: "🪴";
   }
   
   .add-plant {
