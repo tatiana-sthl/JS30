@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: url(https://images.pexels.com/photos/220326/pexels-photo-220326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=900&dpr=1);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#books {
+    list-style: inside square;
+    font-size: 20px;
+    background: whitesmoke;
+    width: 500px;
+    margin: auto;
+    padding: 0;
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+#books li {
+    border-bottom: 1px solid #efefef;
+    padding: 20px;
+}
+
+#books li:last-child {
+    border-bottom: 0;
+}
+
+a {
+    color: #ffc600;
+    text-decoration: none;
+}
