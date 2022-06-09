@@ -10,7 +10,7 @@ body {
 
 #books {
     list-style: inside square;
-    font-size: 20px;
+    font-size: 15px;
     background: whitesmoke;
     width: 500px;
     margin: auto;

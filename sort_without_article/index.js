@@ -6,12 +6,11 @@ function strip(bookName) {
     return bookName.replace(/^(la |le |a |une |un |des )/i, '').trim();
 }
 
-const sortedBooks = books.sort(function (a, b) {
-    if (a > b) {
-        return 1;
-    } else {
-        return -1;
-    }
-});
+const sortedBooks = books.sort((a, b) => strip(a) > strip(b) ? 1 : -1);
+
+document.querySelector('#books').innerHTML = 
+    sortedBooks
+        .map(book => `<li>${book}</li>`)
+        .join('');
 
 console.log(sortedBooks);
