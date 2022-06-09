@@ -1,9 +1,9 @@
-h1 {
+.hero {
     display: flex;
     justify-content: center;
     align-items: center;
     text-shadow: 10px 10px 0 rgba(0,0,0,1);
-    font-size: 100px;
+    font-size: 80px;
 }
 
 p {
