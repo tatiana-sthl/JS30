@@ -1,6 +1,6 @@
 const addItems = document.querySelector('.add-plant');
 const itemsList = document.querySelector('.plants');
-const items = [];
+const items = JSON.parse(localStorage.getItem('items')) || [];
 
 function addItem(e) {
     e.preventDefault();
@@ -12,7 +12,7 @@ function addItem(e) {
     
     items.push(item);
     populateList(items, itemsList); 
-    localStorage.setItem('items', JSON.parse(items));
+    localStorage.setItem('items', JSON.stringify(items));
     this.reset();
 }
 
@@ -27,4 +27,16 @@ function populateList(plants = [], plantsList) {
     }).join('');
 }
 
+function toggleDone(e) {
+    if (!e.target.matches('input')) return;
+    const el = e.target;
+    const index = el.dataset.index;
+    items[index].done = !items[index].done;
+    localStorage.setItem('items', JSON.stringify(items));
+    populateList(items, itemsList);
+}
+
 addItems.addEventListener('submit', addItem);
+itemsList.addEventListener('click', toggleDone);
+
+populateList(items, itemsList);
