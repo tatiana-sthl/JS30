@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Out loud !</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="outloud">
+
+        <h1>"I have a dream"</h1>
+
+        <select name="voice" id="voices">
+            <option value="">Select a voice</option>
+        </select>
+
+        <label for="rate">Rate:</label>
+        <input name="rate" type="range" min="0" max="3" value="1" step="0.1">
+
+        <label for="pitch">Pitch:</label>
+        <input name="pitch" type="range" min="0" max="2" step="0.1">
+
+        <textarea name="text">
+        I have a dream that one day every valley shall be exalted, and every hill and mountain shall be made low, the rough places will be made plain, and the crooked places will be made straight, and the glory of the Lord shall be revealed and all flesh shall see it together.
+        </textarea>
+
+        <button id="stop">Stop</button>
+        <button id="speak">Speak</button>
+
+    </div>
+ 
+    <script src="index.js"></script>
+    
+</body>
+</html>
