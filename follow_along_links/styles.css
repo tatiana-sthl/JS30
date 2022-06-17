@@ -31,10 +31,10 @@ html {
   
   .highlight {
     transition: all 0.2s;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgb(238, 218, 229);
     position: absolute;
     top: 0;
-    background: white;
+    background: rgb(238, 218, 229);
     left: 0;
     z-index: -1;
     border-radius: 20px;
