@@ -20,15 +20,19 @@ html {
     background: white;
     padding: 40px;
     text-align: justify;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px 5px rgba(23, 37, 160, 0.05);
     transform: scale(0.98);
     transition: transform 0.5s;
   }
   
+  .fixed-nav .site-wrap {
+    transform: scale(1);
+  }
+
   header {
     text-align: center;
     height: 50vh;
-    background: url(https://source.unsplash.com/GKN6rpDr0EI/960x640) bottom center no-repeat;
+    background: url(https://pixabay.com/get/ga396a6dcf9ce525f79a80ec9cdd1f0ca40b330b68b1438cb4cf22075b7eedd90e42bbd171951aa154e36a70f025866e57e8c1e52ee203195e414311d7cbf91dd70afbf2ba4aaf2575013462806fa9a0e_1280.png) bottom center no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -38,11 +42,11 @@ html {
   h1 {
     color: white;
     font-size: 7vw;
-    text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
+    text-shadow: 3px 4px 0 #1b5f86;
   }
   
   nav {
-    background: black;
+    background: #1b5f86;
     top: 0;
     width: 100%;
     transition: all 0.5s;
@@ -50,6 +54,11 @@ html {
     z-index: 1;
   }
   
+  .fixed-nav nav {
+    position: fixed;
+    box-shadow: 0 5px rgba(0,0,0,0.1);
+  }
+
   nav ul {
     margin: 0;
     padding:0;
@@ -69,9 +78,13 @@ html {
     max-width: 0;
     overflow: hidden;
     background: white;
-    transition: all .5s;
+    transition: all 0.5s;
     font-weight: 600;
     font-size: 30px;
+  }
+
+  .fixed-nav li.logo {
+    max-width: 500px;
   }
   
   li.logo a {
